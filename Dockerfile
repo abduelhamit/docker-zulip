@@ -40,5 +40,7 @@ RUN chown zulip:zulip /opt/createZulipAdmin.sh
 VOLUME ["$DATA_DIR"]
 EXPOSE 80 443
 
+USER zulip
+
 ENTRYPOINT ["/sbin/entrypoint.sh"]
 CMD ["app:run"]
